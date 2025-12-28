@@ -19,7 +19,6 @@ export const getAcids = async (search: string = ''): Promise<Acid[]> => {
 
 export const getAcidById = async (id: number | string): Promise<Acid | undefined> => {
     try {
-        // Используем dest_api
         const response = await fetch(`${dest_api}/acids/${id}`);
         if (!response.ok) throw new Error("Network response was not ok");
         return await response.json();
@@ -31,7 +30,6 @@ export const getAcidById = async (id: number | string): Promise<Acid | undefined
 
 export const getCurrentCarbonate = async (): Promise<CarbonateInfo | null> => {
     try {
-        // Используем dest_api
         const response = await fetch(`${dest_api}/carbonates/current`);
 
         if (response.status === 403) {
