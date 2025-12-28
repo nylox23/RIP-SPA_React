@@ -1,0 +1,58 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.top-row-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.calc-button-style {
+    white-space: nowrap;
+    position: relative;
+    background-color: #004976;
+    border: none;
+}
+
+.indicator {
+    background-color: red;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8em;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+@media (max-width: 576px) {
+    .top-row-container {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .top-row-container form {
+        width: 100%;
+    }
+
+    .calc-button-style {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .card-img-top {
+        height: 150px;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-custom {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
